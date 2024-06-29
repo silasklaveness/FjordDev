@@ -6,10 +6,10 @@ export default function Component() {
     <div className="dark:bg-muted dark:text-muted-foreground">
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+          <div className="grid gap-6 px-0 md:px-8 lg:px-20 lg:grid-cols-1 lg:gap-12 xl:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
                   Om OceanEdge
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -26,9 +26,9 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <section className="w-full py-20 md:py-32 bg-white">
-        <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm dark:bg-primary dark:text-primary-foreground">
+      <section className="w-full px-0 md:px-12 lg:px-20 py-20 md:py-32 bg-white">
+        <div className="container flex flex-col items-center text-center space-y-6">
+          <div className="md:px-10 lg:px-25 inline-block rounded-lg bg-muted px-3 py-1 text-sm dark:bg-primary dark:text-primary-foreground">
             Vår vison
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
@@ -43,8 +43,8 @@ export default function Component() {
           </p>
         </div>
       </section>
-      <section className="w-full py-20 md:py-32 bg-[#1a1b1e] text-white">
-        <div className="container justify-center px-4 md:px-6 flex flex-col items-center text-center space-y-6">
+      <section className="w-full px-0 md:px-12 lg:px-20 py-20 md:py-32 bg-gray-950 text-white">
+        <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Veiledende Prinsipper Som Definerer Vår Kultur
           </h2>
@@ -77,7 +77,7 @@ export default function Component() {
           </div>
         </div>
       </section>
-      <section className="w-full py-20 md:py-32">
+      <section className="w-full px-0 md:px-12 lg:px-20 py-20 md:py-32">
         <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
           <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm dark:bg-primary dark:text-primary-foreground">
             Vårt team
