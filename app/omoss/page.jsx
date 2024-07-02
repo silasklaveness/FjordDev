@@ -4,9 +4,9 @@ import Kart from "@/components/kart";
 export default function Component() {
   return (
     <div className="dark:bg-muted dark:text-muted-foreground">
-      <section className="w-full py-12 md:py-24 lg:py-32">
+      <section className="w-full px-0 md:px-12 lg:px-20 py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 px-0 md:px-8 lg:px-20 lg:grid-cols-1 lg:gap-12 xl:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-1 lg:gap-12 xl:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
@@ -97,7 +97,9 @@ export default function Component() {
               />
               <div className="space-y-1">
                 <h3 className="text-xl font-bold">Silas Kaae Klaveness</h3>
-                <p className="text-muted-foreground">CEO</p>
+                <p className="fond-bold text-muted-foreground">
+                  Daglig leder, Nettsideutvikler
+                </p>
               </div>
               <p className="text-muted-foreground">
                 Silas er grunnleggeren og utvikleren for Oceanedge. Han
@@ -108,7 +110,7 @@ export default function Component() {
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/placeholder.svg"
+                src="/ruben1.png"
                 width="120"
                 height="120"
                 alt="Jane Smith"
@@ -116,10 +118,18 @@ export default function Component() {
                 loading="lazy"
               />
               <div className="space-y-1">
-                <h3 className="text-xl font-bold">Ruben fugleset</h3>
-                <p className="text-muted-foreground">?</p>
+                <h3 className="text-xl font-bold">Ruben fuglset</h3>
+                <p className="text-muted-foreground">
+                  Salgs- og Kundeservicerepresentant
+                </p>
               </div>
-              <p className="text-muted-foreground">?</p>
+              <p className="text-muted-foreground">
+                Ruben Fuglset har omfattende erfaring innen salg og
+                kundeservice, med sterke kommunikasjonsevner. Han utmerker seg i
+                å bygge kundeforhold og levere løsninger som overgår
+                forventningene, noe som bidrar til økt kundelojalitet og
+                selskapets vekst.
+              </p>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Image

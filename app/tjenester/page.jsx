@@ -5,15 +5,15 @@ export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <div className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="bg-gray-950 w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                     Våre Web Utvikling Tjenester
                   </h1>
-                  <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                  <p className="max-w-[600px] text-gray-300 md:text-xl dark:text-gray-400">
                     Vi tilbyr en rekke web utvikling tjenester for å hjelpe din
                     bedrift å blomstre online. Fra design til optimalisering,
                     gir vi oss ikke før du er fornøyd med ditt prosjekt.
@@ -30,14 +30,14 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container px-4 md:px-6">
+        <section className="w-full px-4 md:px-6 lg:px-10 py-12 md:py-24 lg:py-32 bg-gray-950 dark:bg-gray-800">
+          <div className="container">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl text-white font-bold tracking-tighter sm:text-5xl">
                   Nettsidedesign
                 </h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Vi skaper visuelle og brukervennlige nettsider som fanger
                   oppmerksomheten til dine kunder. Ved å kombinere kreativitet
                   og teknologi er målet å levere førsteklasses resultater.
@@ -56,10 +56,10 @@ export default function Component() {
                 <ul className="grid gap-6">
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">
+                      <h3 className="text-xl font-bold text-gray-100">
                         Brukervennlig Design
                       </h3>
-                      <p className="text-gray-500 dark:text-gray-400">
+                      <p className="text-gray-400 dark:text-gray-400">
                         Vi fokuserer på å skape nettsider som er enkle å
                         navigere og gir en positiv brukeropplevelse.
                       </p>
@@ -67,8 +67,10 @@ export default function Component() {
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">Responsivt Design</h3>
-                      <p className="text-gray-500 dark:text-gray-400">
+                      <h3 className="text-xl font-bold text-gray-100">
+                        Responsivt Design
+                      </h3>
+                      <p className="text-gray-400 dark:text-gray-400">
                         Våre nettsider er optimalisert for alle enheter, fra
                         desktop til mobil.
                       </p>
@@ -76,8 +78,10 @@ export default function Component() {
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">AI Kunst</h3>
-                      <p className="text-gray-500 dark:text-gray-400">
+                      <h3 className="text-xl font-bold text-gray-100">
+                        AI Kunst
+                      </h3>
+                      <p className="text-gray-400 dark:text-gray-400">
                         Vi bruker AI-teknologi til å skape imponerende kunstverk
                         som kan tilpasses og reflektere din merkevares unike
                         stil og visuelle identitet.
@@ -86,7 +90,7 @@ export default function Component() {
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">
+                      <h3 className="text-xl font-bold text-gray-100">
                         Skreddersydd Innhold
                       </h3>
                       <p className="text-gray-500 dark:text-gray-400">

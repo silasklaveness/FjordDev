@@ -132,7 +132,11 @@ export default function Home() {
                     Skape visuelt imponerende og brukervennlige nettsteder.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-black border border-white hover:border-blue-500 rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
+                <div
+                  className={`text-center p-6 bg-black border border-white rounded-lg shadow-md transition-colors duration-300 ${
+                    showScroll ? "bg-gray-800" : "bg-black"
+                  }`}
+                >
                   <WebhookIcon className="mx-auto mb-4 w-20 h-20 text-white" />
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">
                     Webutvikling
@@ -217,9 +221,6 @@ export default function Home() {
                             En moderne og responsiv nettside for en ledende
                             frisørsalong.👑
                           </p>
-                          <button className="flex items-center justify-center mt-2">
-                            <HeartIcon className="w-6 h-6 text-red-500" />
-                          </button>
                         </div>
                       </div>
                     </div>
@@ -244,9 +245,6 @@ export default function Home() {
                             Ikke noen flere prosjekter enn så lenge.
                           </h3>
                           <p className="text-gray-400">😊</p>
-                          <button className="flex items-center justify-center mt-2">
-                            <HeartIcon className="w-6 h-6 text-red-500" />
-                          </button>
                         </div>
                       </div>
                     </div>
@@ -308,7 +306,7 @@ export default function Home() {
                 >
                   <div className="grid gap-4">
                     <motion.div className="grid gap-1" variants={fadeInUp}>
-                      <h3 className="text-xl font-bold">Vår vison</h3>
+                      <h3 className="text-xl font-bold">Vår visjon</h3>
                       <p className="text-gray-500 dark:text-gray-400">
                         Styrke bedrifter med innovative nettsider.
                       </p>
