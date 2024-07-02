@@ -29,7 +29,7 @@ export default function Component() {
       <section className="w-full px-0 md:px-12 lg:px-20 py-20 md:py-32 bg-white">
         <div className="container flex flex-col items-center text-center space-y-6">
           <div className="md:px-10 lg:px-25 inline-block rounded-lg bg-muted px-3 py-1 text-sm dark:bg-primary dark:text-primary-foreground">
-            Vår visjon
+            Vår vison
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Styrke Bedrifter Med Innovative Nettsider
@@ -124,33 +124,26 @@ export default function Component() {
                 </p>
               </div>
               <p className="text-muted-foreground">
-                Ruben har omfattende erfaring innen salg og kundeservice, med
-                sterke kommunikasjonsevner. Han utmerker seg i å bygge
-                kundeforhold og levere løsninger som overgår forventningene, noe
-                som bidrar til økt kundelojalitet og selskapets vekst.
+                Ruben Fuglset har omfattende erfaring innen salg og
+                kundeservice, med sterke kommunikasjonsevner. Han utmerker seg i
+                å bygge kundeforhold og levere løsninger som overgår
+                forventningene, noe som bidrar til økt kundelojalitet og
+                selskapets vekst.
               </p>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/krisstoffer.png"
+                src="/placeholder.svg"
                 width="120"
                 height="120"
                 alt="Michael Johnson"
                 className="rounded-full"
               />
               <div className="space-y-1">
-                <h3 className="text-xl font-bold">Kristoffer Halden</h3>
-                <p className="text-muted-foreground">
-                  Markedsførings- og medieansvarlig
-                </p>
+                <h3 className="text-xl font-bold">?</h3>
+                <p className="text-muted-foreground">?</p>
               </div>
-              <p className="text-muted-foreground">
-                Kristoffer har omfattende erfaring innen digital markedsføring
-                gjennom Facebook og Instagram. Han har hatt suksess med egen
-                dropshipping-nettside. Kristoffer utvikler strategier som
-                tiltrekker nye kunder og øker bedriftens synlighet online, noe
-                som bidrar til selskapets vekst.
-              </p>
+              <p className="text-muted-foreground">?</p>
             </div>
           </div>
         </div>
