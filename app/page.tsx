@@ -132,11 +132,7 @@ export default function Home() {
                     Skape visuelt imponerende og brukervennlige nettsteder.
                   </p>
                 </div>
-                <div
-                  className={`text-center p-6 bg-black border border-white rounded-lg shadow-md transition-colors duration-300 ${
-                    showScroll ? "bg-gray-800" : "bg-black"
-                  }`}
-                >
+                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md transition-colors duration-300">
                   <WebhookIcon className="mx-auto mb-4 w-20 h-20 text-white" />
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">
                     Webutvikling

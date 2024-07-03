@@ -93,7 +93,7 @@ const Portfolio = () => (
           </p>
         </div>
       </div>
-      <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-5xl items-center gap-2 py-5 lg:grid-cols-2 lg:gap-20">
         <PortfolioItem
           title="okBenzo Sandefjord frisør"
           description="En moderne og responsiv nettside for en ledende

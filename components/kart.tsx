@@ -17,12 +17,12 @@ const Kart = () => {
       if (mapRef.current) {
         const google = (window as any).google;
         const map = new google.maps.Map(mapRef.current, {
-          center: { lat: 59.13220550041372, lng: 10.221601665890866 },
-          zoom: 15,
+          center: { lat: 59.13145897108192, lng: 10.21648019867435 },
+          zoom: 10,
         });
 
         new google.maps.Marker({
-          position: { lat: 59.13220550041372, lng: 10.221601665890866 },
+          position: { lat: 59.13145897108192, lng: 10.21648019867435 },
           map: map,
         });
       }
@@ -36,6 +36,6 @@ const Kart = () => {
       Google maps
     </div>
   );
-};  
+};
 
 export default Kart;

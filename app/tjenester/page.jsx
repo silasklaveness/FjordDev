@@ -21,7 +21,7 @@ export default function Component() {
                 </div>
               </div>
               <Image
-                src="/placeholder.svg"
+                src="/tjenester.png"
                 width="550"
                 height="310"
                 alt="Våre Tjenester"
