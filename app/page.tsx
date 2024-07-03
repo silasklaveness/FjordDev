@@ -123,15 +123,17 @@ export default function Home() {
                 Våre Tjenester
               </h1>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div className="text-center p-6 bg-black border border-white shadow-lg hover:bg-gray-800 transition-colors duration-300">
-                  <DribbbleIcon className="mx-auto mb-4 w-20 h-20 text-white" />
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white ">
-                    Nettsidedesign
-                  </h2>
-                  <p className="mb-4 text-white">
-                    Skape visuelt imponerende og brukervennlige nettsteder.
-                  </p>
-                </div>
+                <Link href="/tjenester">
+                  <div className="text-center p-6 bg-black border border-white shadow-lg hover:bg-gray-800 transition-colors duration-300">
+                    <DribbbleIcon className="mx-auto mb-4 w-20 h-20 text-white" />
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white ">
+                      Nettsidedesign
+                    </h2>
+                    <p className="mb-4 text-white">
+                      Skape visuelt imponerende og brukervennlige nettsteder.
+                    </p>
+                  </div>
+                </Link>
                 <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md transition-colors duration-300">
                   <WebhookIcon className="mx-auto mb-4 w-20 h-20 text-white" />
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">

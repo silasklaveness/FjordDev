@@ -119,7 +119,6 @@ const ContactForm = () => {
                 >
                   personvernerklæringen
                 </a>
-                .
               </label>
             </div>
             <Button

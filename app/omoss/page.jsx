@@ -19,6 +19,14 @@ export default function Component() {
                   verktøyene og ressursene de trenger for å lykkes digitalt.
                 </p>
               </div>
+              <div className="space-y-2 mt-4">
+                <h2 className="text-xl font-bold">Kontakt Oss</h2>
+                <p className="text-muted-foreground">Adresse: Sandefjord</p>
+                <p className="text-muted-foreground">Telefon: +47 45786703</p>
+                <p className="text-muted-foreground">
+                  E-post: kontakt@oceanedge.no
+                </p>
+              </div>
             </div>
             <div className="h-64 lg:h-[450px] lg:w-[500px] rounded-lg overflow-hidden shadow-md">
               <Kart />
@@ -107,18 +115,27 @@ export default function Component() {
                 samarbeidsevner. Hans erfaring med lover og forskrifter sikrer
                 profesjonelle og pålitelige nettsideløsninger for bedrifter.
               </p>
+              <p className="text-muted-foreground">
+                Kontakt:{" "}
+                <a
+                  href="mailto:development@oceanedge.no"
+                  className="text-blue-600 underline"
+                >
+                  silas@oceanedge.no
+                </a>
+              </p>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Image
                 src="/ruben1.png"
                 width="120"
                 height="120"
-                alt="Jane Smith"
+                alt="Ruben Fuglset"
                 className="rounded-full"
                 loading="lazy"
               />
               <div className="space-y-1">
-                <h3 className="text-xl font-bold">Ruben fuglset</h3>
+                <h3 className="text-xl font-bold">Ruben Fuglset</h3>
                 <p className="text-muted-foreground">
                   Salgs- og Kundeservicerepresentant
                 </p>
@@ -135,7 +152,7 @@ export default function Component() {
                 src="/krisstoffer.png"
                 width="120"
                 height="120"
-                alt="Michael Johnson"
+                alt="Kristoffer Halden"
                 className="rounded-full"
               />
               <div className="space-y-1">
@@ -150,6 +167,15 @@ export default function Component() {
                 dropshipping-nettside. Kristoffer utvikler strategier som
                 tiltrekker nye kunder og øker bedriftens synlighet online, noe
                 som bidrar til selskapets vekst.
+              </p>
+              <p className="text-muted-foreground">
+                Kontakt:{" "}
+                <a
+                  href="mailto:development@oceanedge.no"
+                  className="text-blue-600 underline"
+                >
+                  kriss@oceanedge.no
+                </a>
               </p>
             </div>
           </div>
