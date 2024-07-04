@@ -8,7 +8,10 @@ import { motion } from "framer-motion";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OceanEdge",
+  title: {
+    default: "OceanEdge",
+    template: "%s | OceanEdge",
+  },
   description: "Nettsideutvikling med Next.js",
 };
 

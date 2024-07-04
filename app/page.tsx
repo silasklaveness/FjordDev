@@ -72,6 +72,7 @@ export default function Home() {
                   >
                     Løft Din Digitale Tilstedeværelse
                   </motion.h1>
+
                   <motion.p
                     className="text-gray-400 md:text-xl"
                     variants={fadeInUp}

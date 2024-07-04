@@ -19,6 +19,12 @@ export default function Component() {
                   verktøyene og ressursene de trenger for å lykkes digitalt.
                 </p>
               </div>
+              <Image
+                src="/test.gif"
+                alt="Description of GIF"
+                width={200}
+                height={200}
+              ></Image>
               <div className="space-y-2 mt-4">
                 <h2 className="text-xl font-bold">Kontakt Oss</h2>
                 <p className="text-muted-foreground">Adresse: Sandefjord</p>
@@ -118,7 +124,7 @@ export default function Component() {
               <p className="text-muted-foreground">
                 Kontakt:{" "}
                 <a
-                  href="mailto:development@oceanedge.no"
+                  href="mailto:silas@oceanedge.no"
                   className="text-blue-600 underline"
                 >
                   silas@oceanedge.no
@@ -171,7 +177,7 @@ export default function Component() {
               <p className="text-muted-foreground">
                 Kontakt:{" "}
                 <a
-                  href="mailto:development@oceanedge.no"
+                  href="mailto:kriss@oceanedge.no"
                   className="text-blue-600 underline"
                 >
                   kriss@oceanedge.no
