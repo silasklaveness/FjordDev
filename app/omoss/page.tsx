@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Kart from "@/components/kart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Om Oss",
+};
 
 export default function Component() {
   return (
@@ -19,12 +24,6 @@ export default function Component() {
                   verktøyene og ressursene de trenger for å lykkes digitalt.
                 </p>
               </div>
-              <Image
-                src="/test.gif"
-                alt="Description of GIF"
-                width={200}
-                height={200}
-              ></Image>
               <div className="space-y-2 mt-4">
                 <h2 className="text-xl font-bold">Kontakt Oss</h2>
                 <p className="text-muted-foreground">Adresse: Sandefjord</p>
@@ -152,6 +151,15 @@ export default function Component() {
                 kundeforhold og levere løsninger som overgår forventningene, noe
                 som bidrar til økt kundelojalitet og selskapets vekst.
               </p>
+              <p className="text-muted-foreground">
+                Kontakt:{" "}
+                <a
+                  href="mailto:ruben@oceanedge.no"
+                  className="text-blue-600 underline"
+                >
+                  ruben@oceanedge.no
+                </a>
+              </p>
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Image
@@ -191,7 +199,7 @@ export default function Component() {
   );
 }
 
-function BoltIcon(props) {
+function BoltIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -211,7 +219,7 @@ function BoltIcon(props) {
   );
 }
 
-function RocketIcon(props) {
+function RocketIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -233,7 +241,7 @@ function RocketIcon(props) {
   );
 }
 
-function UsersIcon(props) {
+function UsersIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

@@ -1,5 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tjenester",
+};
 
 export default function Component() {
   return (
@@ -244,7 +249,7 @@ export default function Component() {
   );
 }
 
-function MountainIcon(props) {
+function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
