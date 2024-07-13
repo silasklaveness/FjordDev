@@ -70,14 +70,14 @@ export default function Home() {
                     className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl"
                     variants={fadeInUp}
                   >
-                    Løft Din Digitale Tilstedeværelse
+                    Vi Bygger Din Nettside!
                   </motion.h1>
 
                   <motion.p
                     className="text-gray-400 md:text-xl"
                     variants={fadeInUp}
                   >
-                    Frigjør kraften i moderne webutvikling med våre tjenester.
+                    La Oss Skape Din Digitale Suksess.
                   </motion.p>
                   <motion.div
                     className="flex flex-col gap-2 min-[400px]:flex-row"
@@ -119,43 +119,64 @@ export default function Home() {
             animate="animate"
             variants={staggerContainer}
           >
-            <div className="mw-auto mh-auto p-8 bg-gray-950 shadow-lg">
-              <h1 className="text-3xl font-extrabold text-center mb-12 text-white">
-                Våre Tjenester
-              </h1>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div className="text-center p-6 bg-black border border-white shadow-lg hover:bg-gray-800 transition-colors duration-300">
-                  <DribbbleIcon className="mx-auto mb-4 w-20 h-20 text-white" />
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white ">
-                    Nettsidedesign
-                  </h2>
-                  <p className="mb-4 text-white">
-                    Skape visuelt imponerende og brukervennlige nettsteder.
-                  </p>
-                </div>
-                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md transition-colors duration-300 ">
-                  <WebhookIcon className="mx-auto mb-4 w-20 h-20 text-white" />
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">
-                    Webutvikling
-                  </h2>
-                  <p className="mb-4 text-white">
-                    Integrasjon av moderne løsninger i din nettside for å hjelpe
-                    din virksomhet.
-                  </p>
-                </div>
-                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
-                  <SearchCodeIcon className="mx-auto mb-4 w-20 h-20 text-white" />
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">
-                    SEO Optimalisering
-                  </h2>
-                  <p className="mb-4 text-white">
-                    Forbedre din nettsides synlighet og rangering i søkemotorer
-                    for å tiltrekke flere besøkende.
-                  </p>
+            <div className="bg-black text-white py-16">
+              <div className="container mx-auto text-center">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2">
+                  Løft Din Digitale Tilstedeværelse
+                </h2>
+                <p className="text-gray-400 text-sm md:text-xl lg:text-3xl md:text-md mb-10">
+                  Tjenestene våre omgjør dine Nettsidedrømmer til Virkelighet
+                </p>
+                <div className="grid gap-8 md:grid-cols-3">
+                  <div className="group relative scale-90 md:scale-100 text-center p-6 bg-black border border-white shadow-lg hover:bg-gray-800 transform hover:scale-90 md:hover:scale-105">
+                    <DribbbleIcon className="w-16 h-16 mx-auto mb-4 text-white" />
+                    <h3 className="text-2xl font-semibold mb-2">
+                      Nettsidedesign
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      Skape visuelt imponerende og brukervennlige nettsteder.
+                    </p>
+                    <button className="absolute bottom-3 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-blue-400 font-bold underline">
+                        Les mer
+                      </span>
+                    </button>
+                  </div>
+                  <div className="group relative scale-90 md:scale-100 text-center p-6 bg-black border border-white shadow-lg hover:bg-gray-800 transform hover:scale-90 md:hover:scale-105">
+                    <WebhookIcon className="w-16 h-16 mx-auto mb-4" />
+                    <h3 className="text-2xl font-semibold mb-2">
+                      Webutvikling
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      Integrasjon av moderne løsninger i din nettside for å
+                      hjelpe din virksomhet.
+                    </p>
+                    <button className="absolute bottom-3 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-blue-400 font-bold underline">
+                        Les mer
+                      </span>
+                    </button>
+                  </div>
+                  <div className="group relative scale-90 md:scale-100 text-center p-6 bg-black border border-white shadow-lg hover:bg-gray-800 transform hover:scale-90 md:hover:scale-105">
+                    <SearchCodeIcon className="w-16 h-16 mx-auto mb-4 text-white" />
+                    <h3 className="text-2xl font-semibold mb-2">
+                      SEO Optimalisering
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      Forbedre din nettsides synlighet og rangering i
+                      søkemotorer for å tiltrekke flere besøkende.
+                    </p>
+                    <button className="absolute bottom-3 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-blue-400 font-bold underline">
+                        Les mer
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </motion.section>
+
           <motion.section
             id="portfolio"
             className="py-12 md:py-24 lg:py-32 bg-black text-gray-50"
