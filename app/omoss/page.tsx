@@ -1,197 +1,218 @@
+"use client";
 import Image from "next/image";
-import Kart from "@/components/kart";
 import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Om Oss",
-};
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import Kart from "@/components/kart";
 
 export default function Component() {
   return (
-    <div className="dark:bg-muted dark:text-muted-foreground">
-      <section className="w-full px-0 md:px-12 lg:px-20 py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-1 lg:gap-12 xl:grid-cols-2">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
-                  Om OceanEdge
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Oceanedge er en nyutviklet teknologibedrift som spesialiserer
-                  seg på å levere innovative nettsideløsninger til bedrifter av
-                  alle størrelser. Vår misjon er å styrke våre kunder med
-                  verktøyene og ressursene de trenger for å lykkes digitalt.
-                </p>
-              </div>
-              <div className="space-y-2 mt-4">
-                <h2 className="text-xl font-bold">Kontakt Oss</h2>
-                <p className="text-muted-foreground">Adresse: Sandefjord</p>
-                <p className="text-muted-foreground">Telefon: +47 45786703</p>
-                <p className="text-muted-foreground">
-                  E-post: kontakt@oceanedge.no
-                </p>
-              </div>
-            </div>
-            <div className="h-64 lg:h-[450px] lg:w-[500px] rounded-lg overflow-hidden shadow-md">
+    <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
+      <section className="w-full px-4 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col justify-center space-y-6"
+            >
+              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+                Om OceanEdge
+              </h1>
+              <p className="text-xl text-gray-300">
+                Oceanedge er en nyutviklet teknologibedrift som spesialiserer
+                seg på å levere innovative nettsideløsninger til bedrifter av
+                alle størrelser. Vår misjon er å styrke våre kunder med
+                verktøyene og ressursene de trenger for å lykkes digitalt.
+              </p>
+              <Card className="bg-gray-800 border-gray-700">
+                <CardContent className="p-6">
+                  <h2 className="text-2xl font-bold mb-4 text-blue-400">
+                    Kontakt Oss
+                  </h2>
+                  <p className="text-gray-300">Adresse: Sandefjord</p>
+                  <p className="text-gray-300">Telefon: +47 45786703</p>
+                  <p className="text-gray-300">E-post: kontakt@oceanedge.no</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="h-[450px] w-full rounded-lg overflow-hidden shadow-2xl"
+            >
               <Kart />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
-      <section className="w-full px-0 md:px-12 lg:px-20 py-20 md:py-32 bg-white">
-        <div className="container flex flex-col items-center text-center space-y-6">
-          <div className="md:px-10 lg:px-25 inline-block rounded-lg bg-muted px-3 py-1 text-sm dark:bg-primary dark:text-primary-foreground">
+
+      <section className="w-full px-4 md:px-12 lg:px-20 py-20 md:py-32 bg-gray-800">
+        <div className="container mx-auto flex flex-col items-center text-center space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block rounded-full bg-blue-500 px-4 py-1.5 text-sm font-medium"
+          >
             Vår visjon
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          >
             Styrke Bedrifter Med Innovative Nettsider
-          </h2>
-          <p className="max-w-3xl text-lg md:text-xl text-muted-foreground dark:text-muted-foreground">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="max-w-3xl text-xl text-gray-300"
+          >
             Hos OceanEdge er vi drevet av en lidenskap for teknologi og et
             engasjement for å hjelpe bedrifter å blomstre i den digitale
             tidsalderen. Vår misjon er å utvikle toppmoderne nettsideløsninger
             som effektiviserer driften, øker produktiviteten og fremmer
             innovasjon for våre kunder.
-          </p>
+          </motion.p>
         </div>
       </section>
-      <section className="w-full px-0 md:px-12 lg:px-20 py-20 md:py-32 bg-gray-950 text-white">
-        <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+
+      <section className="w-full px-4 md:px-12 lg:px-20 py-20 md:py-32 bg-gray-900">
+        <div className="container mx-auto flex flex-col items-center text-center space-y-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          >
             Veiledende Prinsipper Som Definerer Vår Kultur
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="flex flex-col items-center space-y-4">
-              <RocketIcon className="w-12 h-12" />
-              <h3 className="text-xl font-bold">Innovasjon</h3>
-              <p className="text-muted-foreground">
-                Innovasjon handler om å skape nye løsninger. Målet er å leverer
-                unike nettsider med avansert teknologi for å gi våre kunder et
-                konkurransefortrinn.
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-4">
-              <UsersIcon className="w-12 h-12" />
-              <h3 className="text-xl font-bold">Samarbeid</h3>
-              <p className="text-muted-foreground">
-                Vi tror på kraften i teamarbeid og fremmer en kultur med åpen
-                kommunikasjon og gjensidig støtte.
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-4">
-              <BoltIcon className="w-12 h-12" />
-              <h3 className="text-xl font-bold">Fortreffelighet</h3>
-              <p className="text-muted-foreground">
-                Vi er forpliktet til å levere eksepsjonelle resultater og
-                kontinuerlig forbedre våre produkter og tjenester.
-              </p>
-            </div>
+          </motion.h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: RocketIcon,
+                title: "Innovasjon",
+                description:
+                  "Innovasjon handler om å skape nye løsninger. Målet er å leverer unike nettsider med avansert teknologi for å gi våre kunder et konkurransefortrinn.",
+              },
+              {
+                icon: UsersIcon,
+                title: "Samarbeid",
+                description:
+                  "Vi tror på kraften i teamarbeid og fremmer en kultur med åpen kommunikasjon og gjensidig støtte.",
+              },
+              {
+                icon: BoltIcon,
+                title: "Fortreffelighet",
+                description:
+                  "Vi er forpliktet til å levere eksepsjonelle resultater og kontinuerlig forbedre våre produkter og tjenester.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-gray-800 border-gray-700 hover:bg-gray-700 transition-colors duration-300">
+                  <CardContent className="p-6 flex flex-col items-center space-y-4">
+                    <item.icon className="w-12 h-12 text-blue-400" />
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-300">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-      <section className="w-full px-0 md:px-12 lg:px-20 py-20 md:py-32">
-        <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm dark:bg-primary dark:text-primary-foreground">
+
+      <section className="w-full px-4 md:px-12 lg:px-20 py-20 md:py-32 bg-gray-800">
+        <div className="container mx-auto flex flex-col items-center text-center space-y-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block rounded-full bg-blue-500 px-4 py-1.5 text-sm font-medium"
+          >
             Vårt team
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          >
             Møt personene bak OceanEdge
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="flex flex-col items-center space-y-4">
-              <Image
-                src="/silas1.png"
-                width="120"
-                height="120"
-                alt="Silas Kaae Klaveness"
-                className="rounded-full"
-                loading="lazy"
-              />
-              <div className="space-y-1">
-                <h3 className="text-xl font-bold">Silas Kaae Klaveness</h3>
-                <p className="fond-bold text-muted-foreground">
-                  Daglig leder, Nettsideutvikler
-                </p>
-              </div>
-              <p className="text-muted-foreground">
-                Silas er grunnleggeren og utvikleren for Oceanedge. Han
-                kombinerer sin lidenskap for IT med militær disiplin og
-                samarbeidsevner. Hans erfaring med lover og forskrifter sikrer
-                profesjonelle og pålitelige nettsideløsninger for bedrifter.
-              </p>
-              <p className="text-muted-foreground">
-                Kontakt:{" "}
-                <a
-                  href="mailto:silas@oceanedge.no"
-                  className="text-blue-600 underline"
-                >
-                  silas@oceanedge.no
-                </a>
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-4">
-              <Image
-                src="/ruben1.png"
-                width="120"
-                height="120"
-                alt="Ruben Fuglset"
-                className="rounded-full"
-                loading="lazy"
-              />
-              <div className="space-y-1">
-                <h3 className="text-xl font-bold">Ruben Fuglset</h3>
-                <p className="text-muted-foreground">
-                  Salgs- og Kundeservicerepresentant
-                </p>
-              </div>
-              <p className="text-muted-foreground">
-                Ruben har omfattende erfaring innen salg og kundeservice, med
-                sterke kommunikasjonsevner. Han utmerker seg i å bygge
-                kundeforhold og levere løsninger som overgår forventningene, noe
-                som bidrar til økt kundelojalitet og selskapets vekst.
-              </p>
-              <p className="text-muted-foreground">
-                Kontakt:{" "}
-                <a
-                  href="mailto:ruben@oceanedge.no"
-                  className="text-blue-600 underline"
-                >
-                  ruben@oceanedge.no
-                </a>
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-4">
-              <Image
-                src="/krisstoffer.png"
-                width="120"
-                height="120"
-                alt="Kristoffer Halden"
-                className="rounded-full"
-              />
-              <div className="space-y-1">
-                <h3 className="text-xl font-bold">Kristoffer Halden</h3>
-                <p className="text-muted-foreground">
-                  Markedsførings- og medieansvarlig
-                </p>
-              </div>
-              <p className="text-muted-foreground">
-                Kristoffer har omfattende erfaring innen digital markedsføring
-                gjennom Facebook og Instagram. Han har hatt suksess med egen
-                dropshipping-nettside. Kristoffer utvikler strategier som
-                tiltrekker nye kunder og øker bedriftens synlighet online, noe
-                som bidrar til selskapets vekst.
-              </p>
-              <p className="text-muted-foreground">
-                Kontakt:{" "}
-                <a
-                  href="mailto:kriss@oceanedge.no"
-                  className="text-blue-600 underline"
-                >
-                  kriss@oceanedge.no
-                </a>
-              </p>
-            </div>
+          </motion.h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Silas Kaae Klaveness",
+                role: "Daglig leder, Nettsideutvikler",
+                image: "/silas1.png",
+                description:
+                  "Silas er grunnleggeren og utvikleren for Oceanedge. Han kombinerer sin lidenskap for IT med militær disiplin og samarbeidsevner. Hans erfaring med lover og forskrifter sikrer profesjonelle og pålitelige nettsideløsninger for bedrifter.",
+                email: "silas@oceanedge.no",
+              },
+              {
+                name: "Ruben Fuglset",
+                role: "Salgs- og Kundeservicerepresentant",
+                image: "/ruben1.png",
+                description:
+                  "Ruben har omfattende erfaring innen salg og kundeservice, med sterke kommunikasjonsevner. Han utmerker seg i å bygge kundeforhold og levere løsninger som overgår forventningene, noe som bidrar til økt kundelojalitet og selskapets vekst.",
+                email: "ruben@oceanedge.no",
+              },
+              {
+                name: "Kristoffer Halden",
+                role: "Markedsførings- og medieansvarlig",
+                image: "/krisstoffer.png",
+                description:
+                  "Kristoffer har omfattende erfaring innen digital markedsføring gjennom Facebook og Instagram. Han har hatt suksess med egen dropshipping-nettside. Kristoffer utvikler strategier som tiltrekker nye kunder og øker bedriftens synlighet online, noe som bidrar til selskapets vekst.",
+                email: "kriss@oceanedge.no",
+              },
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-gray-900 border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6 flex flex-col items-center space-y-4">
+                    <Image
+                      src={member.image}
+                      width={120}
+                      height={120}
+                      alt={member.name}
+                      className="rounded-full border-4 border-blue-500"
+                    />
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-bold text-white">
+                        {member.name}
+                      </h3>
+                      <p className="text-blue-400 font-medium">{member.role}</p>
+                    </div>
+                    <p className="text-gray-300 text-sm">
+                      {member.description}
+                    </p>
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                    >
+                      {member.email}
+                    </a>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
