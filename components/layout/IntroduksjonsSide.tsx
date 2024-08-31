@@ -39,9 +39,12 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="relative inline-flex h-12 md:h-16 md:w-56 items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-500 to-blue-500 px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500">
+              <Link
+                href="/tjenester"
+                className="relative inline-flex h-12 md:h-16 md:w-56 items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-500 to-blue-500 px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-500"
+              >
                 Utforsk våre tjenester
-              </button>
+              </Link>
               <Link href="/omoss" passHref>
                 <button className="relative inline-flex h-12 md:h-16 md:w-56 items-center justify-center rounded-md border border-gray-200 bg-black px-8 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-950">
                   Finn ut mer

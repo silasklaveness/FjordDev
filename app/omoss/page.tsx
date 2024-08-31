@@ -17,7 +17,7 @@ export default function Component() {
               transition={{ duration: 0.5 }}
               className="flex flex-col justify-center space-y-6"
             >
-              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+              <h1 className="pt-[80px] text-4xl sm:text-5xl xl:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
                 Om OceanEdge
               </h1>
               <p className="text-xl text-gray-300">
@@ -41,7 +41,7 @@ export default function Component() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="h-[450px] w-full rounded-lg overflow-hidden shadow-2xl"
+              className="h-[250px] md:h-[450px] w-full rounded-lg overflow-hidden shadow-2xl"
             >
               <Kart />
             </motion.div>

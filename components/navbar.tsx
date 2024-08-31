@@ -1,25 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
   X,
   ChevronDown,
+  ChevronUp,
   Facebook,
   Instagram,
   Youtube,
 } from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -34,20 +26,20 @@ const links = [
 const pricingOptions = [
   {
     title: "Priskalkulator",
-    price: "",
-    features: [""],
+    description: "Beregn kostnad for ditt prosjekt",
+    icon: "💰",
     url: "/quiz",
   },
   {
     title: "Hosting",
-    price: "",
-    features: [""],
+    description: "Sikker og rask hosting for din nettside",
+    icon: "🚀",
     url: "/hostingvedlikehold",
   },
   {
     title: "Domene",
-    price: "",
-    features: [""],
+    description: "Registrer ditt unike domenenavn",
+    icon: "🌐",
     url: "/domene",
   },
 ];
@@ -55,17 +47,34 @@ const pricingOptions = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isPricingOpen, setIsPricingOpen] = useState(false); // State for pricing menu
-  const router = useRouter();
+  const [isPricingOpen, setIsPricingOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  const togglePricing = () => {
+    if (isMobile) {
+      setIsPricingOpen(!isPricingOpen);
+    }
+  };
 
   return (
     <header
@@ -91,34 +100,55 @@ export default function Navbar() {
                 {link.title}
               </Link>
             ))}
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-white hover:text-gray-300 transition-colors duration-200 text-sm uppercase tracking-wider md:text-black">
-                    Priser
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="">
-                      {pricingOptions.map((option, index) => (
-                        <li key={index}>
-                          <NavigationMenuLink asChild>
-                            <Link href={option.url}>
-                              <div className="flex flex-col justify-between h-full bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
-                                <div className="mb-4">
-                                  <h3 className="text-xl font-semibold text-black">
-                                    {option.title}
-                                  </h3>
-                                </div>
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <div
+              className="relative"
+              ref={dropdownRef}
+              onMouseEnter={() => setIsPricingOpen(true)}
+              onMouseLeave={() => setIsPricingOpen(false)}
+            >
+              <button className="text-white hover:text-gray-300 transition-colors duration-200 text-sm uppercase tracking-wider flex items-center">
+                Priser
+                <ChevronDown size={16} className="ml-1" />
+              </button>
+              <AnimatePresence>
+                {isPricingOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl overflow-hidden"
+                    style={{
+                      maxHeight: "calc(100vh - 100px)",
+                      overflowY: "auto",
+                    }}
+                  >
+                    {pricingOptions.map((option, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Link href={option.url}>
+                          <div className="p-4 hover:bg-gray-100 transition-colors duration-200">
+                            <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                              <span className="mr-2 text-2xl">
+                                {option.icon}
+                              </span>
+                              {option.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mt-1">
+                              {option.description}
+                            </p>
+                          </div>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </nav>
           <div className="md:hidden">
             <Button
@@ -156,10 +186,14 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   className="text-white hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-base font-medium w-full text-left flex justify-between items-center"
-                  onClick={() => setIsPricingOpen((prev) => !prev)}
+                  onClick={togglePricing}
                 >
                   Priser
-                  <ChevronDown size={20} />
+                  {isPricingOpen ? (
+                    <ChevronUp size={20} />
+                  ) : (
+                    <ChevronDown size={20} />
+                  )}
                 </button>
                 <AnimatePresence>
                   {isPricingOpen && (
@@ -173,14 +207,15 @@ export default function Navbar() {
                         {pricingOptions.map((option, index) => (
                           <Link key={index} href={option.url}>
                             <div
-                              className="block px-3 py-2"
+                              className="block px-3 py-2 hover:bg-gray-800"
                               onClick={() => setIsOpen(false)}
                             >
-                              <h3 className="text-sm font-medium text-blue-100 underline">
+                              <h3 className="text-sm font-medium text-blue-100 flex items-center">
+                                <span className="mr-2">{option.icon}</span>
                                 {option.title}
                               </h3>
                               <p className="text-sm text-gray-400">
-                                {option.price}
+                                {option.description}
                               </p>
                             </div>
                           </Link>
@@ -192,7 +227,7 @@ export default function Navbar() {
               </div>
               <div className="flex space-x-4 justify-center mt-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/people/OceanEdge-Development/61561210144553/?sk=about"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-500"
@@ -200,7 +235,7 @@ export default function Navbar() {
                   <Facebook size={24} />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/oceanedge_dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-pink-600 hover:text-pink-500"

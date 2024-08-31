@@ -11,6 +11,7 @@ interface Service {
   title: string;
   description: string;
   color: string;
+  link: string;
 }
 
 export default function ServiceShowcase() {
@@ -20,6 +21,7 @@ export default function ServiceShowcase() {
       title: "Nettsidedesign",
       description: "Skape visuelt imponerende og brukervennlige nettsteder.",
       color: "from-purple-500 to-indigo-500",
+      link: "/tjenester",
     },
     {
       icon: <Code className="w-12 h-12" />,
@@ -27,6 +29,7 @@ export default function ServiceShowcase() {
       description:
         "Integrasjon av moderne løsninger i din nettside for å hjelpe din virksomhet.",
       color: "from-blue-500 to-cyan-500",
+      link: "/tjenester",
     },
     {
       icon: <Search className="w-12 h-12" />,
@@ -34,6 +37,7 @@ export default function ServiceShowcase() {
       description:
         "Forbedre din nettsides synlighet og rangering i søkemotorer for å tiltrekke flere besøkende.",
       color: "from-green-500 to-emerald-500",
+      link: "/tjenester",
     },
   ];
 
@@ -77,7 +81,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="relative overflow-hidden rounded-lg shadow-xl touch-auto will-change-transform"
+      className="relative overflow-hidden rounded-lg shadow-xl touch-auto will-change-transform cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
@@ -101,6 +105,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
         <p className="text-gray-200 mb-4 flex-grow">{service.description}</p>
         <motion.button
+          onClick={() => window.open(service.link)}
           initial={{ opacity: 0, y: 20 }}
           animate={
             isHovered ||
@@ -111,7 +116,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
           transition={{ duration: 0.3 }}
           className="mt-auto bg-white text-gray-900 py-2 px-4 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300"
         >
-          Learn More
+          Les mer
         </motion.button>
       </div>
     </motion.div>
