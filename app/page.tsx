@@ -1,14 +1,12 @@
 "use client";
-import Link from "next/link";
+
 import Image from "next/image";
 import { useState, useCallback } from "react";
-import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import ScrollToTop from "react-scroll-up";
 import TidligereProsjekter from "@/components/layout/TidligereProsjekter";
 import Modal from "@/components/fjorddevbot";
 import Tjenestekort from "@/components/layout/TjenesteKort";
-import Kart from "@/components/kart";
 import IntroduksjonsSide from "@/components/layout/IntroduksjonsSide";
 import { Card, CardContent } from "@/components/ui/card";
 
