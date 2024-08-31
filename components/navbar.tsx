@@ -52,7 +52,7 @@ const pricingOptions = [
   },
 ];
 
-export default function Component() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isPricingOpen, setIsPricingOpen] = useState(false); // State for pricing menu
